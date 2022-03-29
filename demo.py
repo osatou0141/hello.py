@@ -1,5 +1,5 @@
-import streamrit as st
-omedy.")genre = st.radio(
+import streamlit as st
+genre = st.radio(
     "What's your favorite movie genre",
     ('Comedy', 'Drama', 'Documentary'))
 
