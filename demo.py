@@ -6,4 +6,4 @@ omedy.")genre = st.radio(
 if genre == 'Comedy':
     st.write('You selected comedy.')
 else:
-    st.write("You didn't select comedy.")
+    st.write("You didn't select comedy.')
