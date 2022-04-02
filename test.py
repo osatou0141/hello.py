@@ -1,3 +1,4 @@
-import qrcode
-img = qrcode.make('https://www.studio-chips.com/')
-img.save('result.png')
+import streamlit as st
+st.title('QRコード生成')
+url = st.text_input('URLの入力：')
+st.button('生成')
