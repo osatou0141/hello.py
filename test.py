@@ -4,5 +4,7 @@ import numpy as np
 st.title('QRコード生成')
 url = st.text_input('URLの入力：')
 if st.button('生成'):
-    img = qrcode.make(url)
-    st.image(np.array(img))
+    _img = qrcode.make(url)
+    _img.save('qrcode.png')
+    img = Image.open('qrcode.png')
+    st.image(img)
