@@ -31,6 +31,7 @@ try:
     qr.png(QR_FILE, scale=qr_scale, module_color=QR_CODE_COLOR, background=BACKGROUND_COLOR, quiet_zone=4)
     img = Image.open(QR_FILE)
     with col2:
+        st.write('hello')
         st.image(img)
 except pyqrcode.DataOverflowError:
     with col2:
