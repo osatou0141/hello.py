@@ -1,5 +1,5 @@
 import streamlit as st
-import pyqrcodeng as pyqrcode
+import pyqrcodeng
 from PIL import Image
 
 st.title('QRコード生成')
@@ -16,7 +16,7 @@ with col2:
     CODE_COLOR = st.selectbox('ドットの色を選択', ['#000000', '#FFFFFF', '#FF0000', '#00FF00', '#0000FF'])
     BACK_COLOR = st.selectbox('背景の色を選択', ['#FFFFFF', '#000000', '#00FF00', '#FF0000', '#0000FF'])
 
-qr = pyqrcode.create(url, correction, version)
+qr = pyqrcodeng.create(url, correction, version)
 qr.png('testQRcode.png', scale=5, module_color=CODE_COLOR, background=BACK_COLOR, quiet_zone=4)
 img = Image.open(QR_FILE)
 st.image(img)
