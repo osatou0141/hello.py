@@ -1,4 +1,4 @@
-import segno
-qrcode = segno.make('hello')
+from segno import make
+qrcode = make('hello')
 qrcode.save('qrcode.png')
 qrcode.show()
