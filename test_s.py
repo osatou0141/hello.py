@@ -2,7 +2,7 @@ import segno
 import streamlit as st
 from PIL import Image
 
-QR_FILE = 'testQRcode.png'
+QR_FILE = 'segnoQRcode.png'
 qr_url = st.text_input('URLを入力', value='https://github.com/osatou0141/st_sample')
 
 col1, col2 = st.columns(2)
