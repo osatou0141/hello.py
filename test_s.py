@@ -4,7 +4,6 @@ from PIL import Image
 
 QR_FILE = 'testQRcode.png'
 qr_url = st.text_input('URLを入力', value='https://github.com/osatou0141/st_sample')
-DARK_COLOR = (250, 0, 0, 255)
 
 col1, col2 = st.columns(2)
 with col1:
@@ -12,6 +11,7 @@ with col1:
     correction = st.select_slider('誤り修正レベル', options=['L', 'M', 'Q', 'H'], value='H')
 
 with col2:
+    DARK_COLOR = st.selectbox('大ドットの色を選択', ['#000000', '#FFFFFF', '#FF0000', '#00FF00', '#0000FF'])
     CODE_COLOR = st.selectbox('ドットの色を選択', ['#000000', '#FFFFFF', '#FF0000', '#00FF00', '#0000FF'])
     BACK_COLOR = st.selectbox('背景の色を選択', ['#FFFFFF', '#000000', '#00FF00', '#FF0000', '#0000FF'])
 
